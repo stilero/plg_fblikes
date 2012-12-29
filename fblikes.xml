@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+    <name>Content - FB Likes</name>
+    <author>Daniel Eliasson - joomla at stilero.com</author>
+    <creationDate>2012-dec-29</creationDate>
+    <copyright>Copyright (c) 2012-dec-29 Stilero Webdesign http://www.stilero.com. All rights reserved.</copyright>
+    <authorEmail>joomla@stilero.com</authorEmail>
+    <authorUrl>www.stilero.com</authorUrl>
+    <version>1.0</version>
+    <license>GPLv2</license>
+    <description>Displays FB Likes before each article</description>
+    <files>
+        <filename plugin="fblikes">fblikes.php</filename>
+        <folder>fblikes</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB.plg_content_fblikes.ini</language>
+        <language tag="en-GB">en-GB.plg_content_fblikes.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="/plugins/content/fblikes/fblikes/elements">
+            <fieldset name="settings" 
+                      label="PLG_CONTENT_FBLIKES_SETTINGS">
+                <field
+                        name="categories"
+                        type="categories"
+                        label="PLG_CONTENT_FBLIKES_CATEGORIES"
+                        description="PLG_CONTENT_FBLIKES_CATEGORIES_DESC" />
+                <field name="width" 
+                       type="text" 
+                       default="470" 
+                       label="PLG_CONTENT_FBLIKES_WIDTH" 
+                       description="PLG_CONTENT_FBLIKES_WIDTH_DESC"/>
+                <field name="showfaces" 
+                       type="radio" 
+                       default="0" 
+                       label="PLG_CONTENT_FBLIKES_SHOWFACES" 
+                       description="PLG_CONTENT_FBLIKES_SHOWFACES_DESC">
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </field>
+                <field name="layout" 
+                       type="list" 
+                       default="" 
+                       label="PLG_CONTENT_FBLIKES_LAYOUT" 
+                       description="PLG_CONTENT_FBLIKES_LAYOUT_DESC">
+                    <option value="">Standard</option>
+                    <option value="button_count">Button Count</option>
+                    <option value="box_count">Box Count</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <administration>
+        <languages folder="language">
+            <language tag="en-GB">en-GB.plg_content_fblikes.ini</language>
+            <language tag="en-GB">en-GB.plg_content_fblikes.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
