@@ -64,7 +64,7 @@ class FBLikes extends FblSocialPlugin{
     }
 
     public function getHTML(){
-        $html = '<div class="fb-like"'.
+        $html = '<span class="fb-like"'.
                 ' data-href="'.$this->url.'"'.
                 ' data-send="'.$this->send.'"'.
                 $this->layout().
@@ -74,7 +74,7 @@ class FBLikes extends FblSocialPlugin{
                 $this->colorScheme().
                 $this->verb().
                 '>'.
-            '</div>';
+            '</span>';
         return $html;
     }
     
